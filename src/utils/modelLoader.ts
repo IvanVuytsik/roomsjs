@@ -2,8 +2,8 @@ import { useGLTF } from '@react-three/drei';
 import { useMemo } from 'react';
 
 const MODEL_REGISTRY = {
-  compNightRoom: '/src/assets/models/comp_night_room.glb',
-  compDayRoom: '/src/assets/models/comp_day_room.glb', 
+  compNightRoom: 'public/models/comp_night_room.glb',
+  compDayRoom: 'public/models/comp_day_room.glb', 
 } as const;
 
 const preloadedModels = new Set<string>();
