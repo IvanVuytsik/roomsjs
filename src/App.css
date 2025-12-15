@@ -1,0 +1,18 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.app * {
+  box-sizing: border-box;
+}
+
+.app > *:not(:last-child) {
+  z-index: 1;
+}
+
+.app > *:last-child {
+  z-index: 2;
+}

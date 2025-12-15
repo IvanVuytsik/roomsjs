@@ -1,0 +1,265 @@
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 40;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 28.8rem; 
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 50;
+}
+
+.sidebar-container.open {
+  transform: translateX(0);
+}
+
+.sidebar-content {
+  height: 100%;
+  overflow-y: auto;
+}
+ 
+.sidebar-day {
+  background: #ffffff;
+  color: #000000;
+  border-left: 1px solid #000000;
+}
+
+.sidebar-night {
+  background: #000000;
+  color: #ffffff;
+  border-left: 1px solid #ffffff;
+}
+ 
+.sidebar-header {
+  position: relative;
+}
+
+.sidebar-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  width: auto;
+  height: auto;
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #000;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-close-button:hover {
+  background: transparent;
+  color: #000;
+}
+
+.sidebar-night .sidebar-close-button {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.sidebar-night .sidebar-close-button:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+ 
+.sidebar-image-container {
+  position: relative;
+  height: 16rem;
+  overflow: hidden;
+  border-bottom: 1px solid #000;
+}
+
+.sidebar-night .sidebar-image-container {
+  border-bottom-color: #fff;
+}
+
+.sidebar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent, transparent);
+  opacity: 0.6;
+}
+
+.sidebar-title {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #fff;
+  text-transform: uppercase;
+}
+ 
+.sidebar-body {
+  padding: 2rem;
+}
+
+.sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.sidebar-section-title {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.sidebar-description {
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+}
+ 
+.sidebar-features {
+  margin-bottom: 2rem;
+}
+
+.sidebar-feature-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #000;
+  margin-bottom: 0;
+}
+
+.sidebar-feature-item:last-child {
+  border-bottom: none;
+}
+
+.sidebar-night .sidebar-feature-item {
+  border-bottom-color: #fff;
+}
+
+.sidebar-feature-icon {
+  margin-right: 1rem;
+  font-weight: 300;
+}
+
+.sidebar-feature-text {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+ 
+.sidebar-cta {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid #000;
+  margin-top: 2rem;
+}
+
+.sidebar-night .sidebar-cta {
+  border-color: #fff;
+}
+
+.sidebar-cta-title {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.sidebar-cta-description {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-cta-button {
+  background: transparent;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #000;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.sidebar-cta-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.sidebar-night .sidebar-cta-button {
+  color: #fff;
+  border-color: #fff;
+}
+
+.sidebar-night .sidebar-cta-button:hover {
+  background: #fff;
+  color: #000;
+}
+ 
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 20rem;
+  }
+  
+  .sidebar-body {
+    padding: 1.25rem;
+  }
+  
+  .sidebar-title {
+    font-size: 1.25rem;
+  }
+  
+  .sidebar-section-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-container {
+    width: 100vw;
+  }
+  
+  .sidebar-body {
+    padding: 1rem;
+  }
+  
+  .sidebar-image-container {
+    height: 14rem;
+  }
+  
+  .sidebar-close-button {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+}
